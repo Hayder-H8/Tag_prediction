@@ -33,3 +33,6 @@ To extract features from the source code of exercises, train models, and make pr
 ```bash
 python code_embeds.py
 
+code_classification_dataset folder should be in the same folder as the cloned repo (link:https://drive.google.com/file/d/1FyNPiEKkZBfhz4ua0eM3PQjbRWVwO95J/view?usp=sharing)
+
+
