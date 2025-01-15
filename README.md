@@ -26,6 +26,7 @@ The extracted features are used to train various models, including:
 3. **Prediction**: Models are evaluated on their ability to predict tags.
 
 ## How to Use
+code_classification_dataset folder should be in the same folder as the cloned repo (link:https://drive.google.com/file/d/1FyNPiEKkZBfhz4ua0eM3PQjbRWVwO95J/view?usp=sharing)
 
 ### Extract Features and Train Models
 To extract features from the source code of exercises, train models, and make predictions using linear regressors, random forests, and SVMs, run the following command:
@@ -33,6 +34,6 @@ To extract features from the source code of exercises, train models, and make pr
 ```bash
 python code_embeds.py
 
-code_classification_dataset folder should be in the same folder as the cloned repo (link:https://drive.google.com/file/d/1FyNPiEKkZBfhz4ua0eM3PQjbRWVwO95J/view?usp=sharing)
+
 
 
