@@ -2,7 +2,7 @@ import os
 from utils import build_dataset , show_tag_distr , co_occ_matrix ,corr_difficulty,clean_text,extract_top_5_word_embeddings ,tags_to_binary_vector , hamming_loss
 import numpy as np
 import pandas as pd
-
+import nltk
 import torch
 import sys
 from gensim.models import Word2Vec
@@ -46,6 +46,13 @@ def main():
 
     corpus = dataset['cleaned_text'].tolist()
     sentences=[text.split() for text in corpus]
+    print('lemmatizing......')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
+    lemmatizer = WordNetLemmatizer()
+    sentences = [
+    [lemmatizer.lemmatize(word) for word in text.split()] 
+    for text in corpus
 
     model = Word2Vec(sentences, vector_size=20, window=5, min_count=1, sg=1, epochs=10)
 
